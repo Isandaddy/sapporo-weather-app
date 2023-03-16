@@ -23,11 +23,11 @@ export class Cloud {
 
   generateWeather() {
     this.canvas.width = window.innerWidth;
-    // this.canvas.height = window.innerHeight;
-    for (let i = 0; i < 7; i++) {
+    this.canvas.height = window.innerHeight;
+    for (let i = 0; i < 10; i++) {
       const cloudOffset = 10; // offset from top-left corner of canvas
-      const x = Math.random() * this.canvas.width / 2 + cloudOffset;
-      const y = Math.random() * this.canvas.height / 2 + cloudOffset;
+      const x = Math.random() * this.canvas.width + cloudOffset;
+      const y = Math.random() * this.canvas.height / 3 + cloudOffset;
       this.drawCloud(x, y);
     }
   }
